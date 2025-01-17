@@ -40,7 +40,7 @@ public class UserController {
         return "redirect:/";
     }
 
-    @GetMapping("/update}")
+    @GetMapping("/update")
     public String edit(Model model, @RequestParam("id") int id) {
         model.addAttribute("user", userService.getUserById(id));
         return "/update";
